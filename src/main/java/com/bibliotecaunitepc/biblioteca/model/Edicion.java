@@ -33,7 +33,6 @@ public class Edicion {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "libro_id")
     private Libro libro;
-
     @ManyToMany
     @JoinTable(
             name = "autor_edicion",
