@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Getter @Setter
 @NoArgsConstructor
@@ -17,6 +19,6 @@ public class Editorial {
     private String nombre;
     private String pais;
     private String Ciudad;
-    @ManyToOne
-    private Edicion edicion;
+    @OneToMany(mappedBy = "editorial")
+    private List<Edicion> ediciones;
 }

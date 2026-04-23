@@ -1,26 +1,20 @@
-package com.bibliotecaunitepc.biblioteca.model;
+package com.bibliotecaunitepc.biblioteca.dto.estudiante;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
-@Getter @Setter
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Estudiante {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+public class EstudianteResponse {
+    private Long id;
     private int codigoEstudiante;
     private String nombre;
     private String apellido;
     private String Carrera;
     private String celular;
     private String correo;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "campus_id")
-    private Campus campus;
 }

@@ -7,6 +7,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Getter @Setter
 @NoArgsConstructor
@@ -19,4 +22,6 @@ public class Campus {
     private Estado estado;
     @ManyToOne
     private Sede sede;
+    @OneToMany(mappedBy = "campus")
+    private List<Estudiante> estudiantes = new ArrayList<>();
 }

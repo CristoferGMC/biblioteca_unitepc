@@ -1,26 +1,18 @@
-package com.bibliotecaunitepc.biblioteca.model;
+package com.bibliotecaunitepc.biblioteca.dto.adquisicion;
 
 import com.bibliotecaunitepc.biblioteca.enums.TipoAdquisicion;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.math.BigDecimal;
 import java.time.LocalDate;
 
-@Entity
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Adquisicion {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class AdquisicionResponse {
     private Long id;
     private String proveedor;
     private LocalDate fecha_adquisicion;
-    private BigDecimal precio;
-    @Enumerated(EnumType.STRING)
     private TipoAdquisicion tipoAdquisicion;
 }

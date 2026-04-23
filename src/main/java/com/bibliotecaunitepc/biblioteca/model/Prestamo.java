@@ -24,7 +24,8 @@ public class Prestamo {
     private LocalDateTime fechaPrestamo;
 
     @Enumerated(EnumType.STRING)
-    private EstadoPrestamo estado;
+    private EstadoPrestamo estadoPrestamo;
+    private TipoPrestamo tipoPrestamo;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "usuario_id")
