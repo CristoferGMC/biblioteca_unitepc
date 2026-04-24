@@ -17,5 +17,5 @@ public class Descriptor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nombre;
+    private String nombre;//que esa unico para no repetir descripcion
 }
