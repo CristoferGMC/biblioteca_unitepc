@@ -1,15 +1,15 @@
 package com.bibliotecaunitepc.biblioteca.dto.edicion;
 
+import com.bibliotecaunitepc.biblioteca.dto.autor.AutorResponse;
+import com.bibliotecaunitepc.biblioteca.dto.descriptor.DescriptorResponse;
 import com.bibliotecaunitepc.biblioteca.model.DescriptorEdicion;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.List;
 
 @Getter @Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class EdicionResponse {
@@ -26,10 +26,10 @@ public class EdicionResponse {
     private String dewey;
     private String cutter;
     private String imagenUrl;
-    private Long libroId;
-    //MannyToMany
-    private List<Long> autorId;
-    private Long editorialId;
+    //libroId
+    private String tituloOriginal;
+    private List<String> autorResponseList;//traer nombre de los autores
+    private String nombreEditorial;
     //OneToManyTablaIntermedia
-    private List<DescriptorEdicion> descriptorEdicion;
+    private List<String> descriptorResponseList;
 }

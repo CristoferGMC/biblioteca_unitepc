@@ -1,0 +1,42 @@
+-----------------------------
+Funciones principales
+//Usuario
+registrar usuario
+eliminar usuario
+editar usuario
+traer un usuario
+traer todos los usuarios
+//Estudiante
+registrar estudiante
+traer un estudiante
+traer todos los estudiantes
+editar estudiante
+//libro
+registrar libro
+traer un libro
+traer todos los libro
+editar libro
+eliminar libro(logico, cambiar estado a baja)
+//prestamo
+registrar prestamo
+traer un prestamo
+traer todos los prestamos
+devolucion prestamo
+//autor
+registrar autor
+editar autor
+//descriptor
+registrar descriptor
+editar descriptor
+//adquisicion
+crear adquisicion
+//por seguridad no pondria editar, para que no cambien el precio la fecha o algo de adquisicion
+//Editorial
+crear editorial
+editar editorial(porsi acaso)
+//campus
+crear campus
+editar campus
+//sede
+crear sede
+editar sede

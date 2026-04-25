@@ -14,7 +14,6 @@ import java.time.LocalDate;
 public class EjemplarCreateRequest {
     //CodigoInventario se generara internamente
     private String comentario;
-    private EstadoEjemplar estadoEjemplar;
     private LocalDate fechaIngreso;
     private Long edicionId;
     private Long adquisicionId;

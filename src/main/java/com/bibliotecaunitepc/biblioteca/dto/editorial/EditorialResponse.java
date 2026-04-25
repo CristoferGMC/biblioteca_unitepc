@@ -11,6 +11,6 @@ import lombok.Setter;
 public class EditorialResponse {
     private Long id;
     private String nombre;
-    private String pais;
     private String Ciudad;
+    private String pais;
 }

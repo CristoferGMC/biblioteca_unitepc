@@ -20,7 +20,8 @@ public class Campus {
     private Long id;
     private String nombre;
     private Estado estado;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "sede_id")
     private Sede sede;
     @OneToMany(mappedBy = "campus")
     private List<Estudiante> estudiantes = new ArrayList<>();

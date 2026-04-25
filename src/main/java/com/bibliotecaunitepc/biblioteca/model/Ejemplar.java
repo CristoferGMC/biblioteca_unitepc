@@ -30,7 +30,7 @@ public class Ejemplar {
 
     @Enumerated(EnumType.STRING)
     private TipoEjemplar tipoEjemplar;
-    private LocalDate fecha_ingreso;
+    private LocalDate fechaIngreso;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "edicion_id")

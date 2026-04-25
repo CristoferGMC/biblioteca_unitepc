@@ -13,5 +13,4 @@ import lombok.Setter;
 public class CampusResponse {
     private Long id;
     private String nombre;
-    private String nombreSede;
 }

@@ -40,13 +40,9 @@ public class Edicion {
             inverseJoinColumns = @JoinColumn(name = "autor_id")
     )
     private List<Autor> autores = new ArrayList<>();
-    //una edición es creada por una editorial;
-    //una editorial crea varias ediciones;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "editorial_id")
     private Editorial editorial;
-    //una edición tiene varios descriptores
-    //un descriptor pertenese a varias ediciones
     @OneToMany(mappedBy = "edicion")
     private List<DescriptorEdicion> descriptorEdicion = new ArrayList<>();
 }

@@ -1,0 +1,2 @@
+registrar libro nuevo nesesita autorizacion de jefe biblioteca,
+y luego de que lo autorize resien se puede imprimir el marbete
