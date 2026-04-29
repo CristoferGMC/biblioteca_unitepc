@@ -1,19 +1,18 @@
-package com.bibliotecaunitepc.biblioteca.dto.estudiante;
+package com.bibliotecaunitepc.biblioteca.dto.personal;
 
 import com.bibliotecaunitepc.biblioteca.dto.usuario.UsuarioResponse;
 import lombok.*;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
-public class EstudianteResponse {
+public class PersonalResponse {
     private Long id;
-    private int codigoEstudiante;
+    private String ci;
     private String nombre;
     private String apellido;
-    private String carrera;
     private String celular;
     private String correo;
 

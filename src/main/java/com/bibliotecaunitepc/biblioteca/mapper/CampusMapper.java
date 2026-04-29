@@ -11,13 +11,15 @@ public class CampusMapper {
     public Campus toEntity(CampusCreateRequest dto){
         Campus c = new Campus();
         c.setNombre(dto.getNombre());
+        c.setDirecccion(dto.getDireccion());
         c.setEstado(Estado.ACTIVO);
         return  c;
     }
     public CampusResponse toResponse(Campus c){
         return new CampusResponse(
                 c.getId(),
-                c.getNombre()
+                c.getNombre(),
+                c.getDirecccion()
         );
     }
 }

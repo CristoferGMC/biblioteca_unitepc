@@ -19,10 +19,13 @@ public class Campus {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
+    private String direcccion;
     private Estado estado;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "sede_id")
     private Sede sede;
     @OneToMany(mappedBy = "campus")
     private List<Estudiante> estudiantes = new ArrayList<>();
+    @OneToMany(mappedBy = "campus")
+    private List<Personal> personal = new ArrayList<>();
 }

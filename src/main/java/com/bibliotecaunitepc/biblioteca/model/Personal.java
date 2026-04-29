@@ -12,14 +12,19 @@ import lombok.Setter;
 @Getter @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Usuario {
+public class Personal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String usuario;
-    private String contrasena;
-    @Enumerated(EnumType.STRING)
-    private Rol rol;
-    @Enumerated(EnumType.STRING)
-    private Estado estado;
+    private String ci;
+    private String nombre;
+    private String apellido;
+    private String celular;
+    private String correo;
+    @OneToOne
+    @JoinColumn(name = "usuario_id")
+    private Usuario usuario;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "campus_id")
+    private Campus campus;
 }

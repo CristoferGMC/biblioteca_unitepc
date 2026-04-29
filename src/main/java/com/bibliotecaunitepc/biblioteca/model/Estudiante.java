@@ -20,6 +20,9 @@ public class Estudiante {
     private String Carrera;
     private String celular;
     private String correo;
+    @OneToOne
+    @JoinColumn(name = "usuario_id")
+    private Usuario usuario;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "campus_id")
     private Campus campus;

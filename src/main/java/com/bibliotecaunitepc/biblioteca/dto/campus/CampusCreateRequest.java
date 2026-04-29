@@ -11,5 +11,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class CampusCreateRequest {
     private String nombre;
+    private String direccion;
     private Long sedeId;
 }
