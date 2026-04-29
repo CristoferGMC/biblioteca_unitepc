@@ -1,5 +1,6 @@
 package com.bibliotecaunitepc.biblioteca.dto.edicion;
 
+import com.bibliotecaunitepc.biblioteca.enums.TipoEdicion;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,22 +13,21 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class EdicionCreateRequest {
-    private String tituloEdicion;
-    private String descripcionEdicion;
     private int edicion;
     private int volumen;
     private int paginas;
     private String idioma;
-    private boolean edicionEspecial;
+    private TipoEdicion tipoEdicion;
     private LocalDate fechaPublicacion;
     private String isbn;
     private String dewey;
     private String cutter;
     private String imagenUrl;
+    private String notaEdicion;
     private Long libroId;
     //MannyToMany
     private List<Long> autorIds;
     private Long editorialId;
     //OneToManyTablaIntermedia
-    private List<EdicionDescriptorRequest> edicionDescriptores;
+    private List<Long> descriptorIds;
 }

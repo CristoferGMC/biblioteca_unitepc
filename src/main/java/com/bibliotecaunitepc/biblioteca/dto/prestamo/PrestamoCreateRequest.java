@@ -19,8 +19,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PrestamoCreateRequest {
-    private LocalDateTime fechaPrestamo;
-    private EstadoPrestamo estadoPrestamo;
     private TipoPrestamo tipoPrestamo;
     private Long usuarioId;
     private Long estudianteId;

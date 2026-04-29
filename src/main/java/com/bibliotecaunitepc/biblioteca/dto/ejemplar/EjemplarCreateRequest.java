@@ -1,6 +1,6 @@
 package com.bibliotecaunitepc.biblioteca.dto.ejemplar;
 
-import com.bibliotecaunitepc.biblioteca.enums.EstadoEjemplar;
+import com.bibliotecaunitepc.biblioteca.enums.TipoEjemplar;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,6 +14,7 @@ import java.time.LocalDate;
 public class EjemplarCreateRequest {
     //CodigoInventario se generara internamente
     private String comentario;
+    private TipoEjemplar tipoEjemplar;
     private LocalDate fechaIngreso;
     private Long edicionId;
     private Long adquisicionId;

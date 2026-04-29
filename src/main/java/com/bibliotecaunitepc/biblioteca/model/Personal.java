@@ -8,6 +8,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Getter @Setter
 @NoArgsConstructor
@@ -24,6 +26,8 @@ public class Personal {
     @OneToOne
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
+    @OneToMany(mappedBy = "personal")
+    private List<Prestamo> prestamos;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "campus_id")
     private Campus campus;

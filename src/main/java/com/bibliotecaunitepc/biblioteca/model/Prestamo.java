@@ -28,8 +28,8 @@ public class Prestamo {
     private TipoPrestamo tipoPrestamo;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "usuario_id")
-    private Usuario usuario;
+    @JoinColumn(name = "personal_id")
+    private Personal personal;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "estudiante_id")
