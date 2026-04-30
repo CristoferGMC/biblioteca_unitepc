@@ -5,7 +5,7 @@ import com.bibliotecaunitepc.biblioteca.dto.ejemplar.EjemplarResponse;
 
 import java.util.List;
 
-public interface EjemplarService {
+public interface EjemplarrService {
     EjemplarResponse create(EjemplarCreateRequest request);
     EjemplarResponse update(Long id);
     void delete(Long id);

@@ -1,4 +1,4 @@
 package com.bibliotecaunitepc.biblioteca.service;
 
-public interface PrestamoService {
+public interface CatalogoService {
 }

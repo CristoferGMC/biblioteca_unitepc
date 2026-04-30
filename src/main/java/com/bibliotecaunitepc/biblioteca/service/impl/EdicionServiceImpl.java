@@ -20,6 +20,9 @@ public class EdicionServiceImpl implements EdicionService {
 
     @Override
     public EdicionResponse create(EdicionCreateRequest request) {
+        //crear descripctor
+        //crear autor
+        //crear libro
         Edicion e = edicionRepository.save(edicionMapper.toEntity(request));
         return null;
     }
