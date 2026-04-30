@@ -4,6 +4,7 @@ import com.bibliotecaunitepc.biblioteca.dto.autor.AutorResponse;
 import com.bibliotecaunitepc.biblioteca.dto.descriptor.DescriptorResponse;
 import com.bibliotecaunitepc.biblioteca.dto.editorial.EditorialResponse;
 import com.bibliotecaunitepc.biblioteca.dto.libro.LibroResponse;
+import com.bibliotecaunitepc.biblioteca.enums.Idioma;
 import com.bibliotecaunitepc.biblioteca.enums.TipoEdicion;
 import com.bibliotecaunitepc.biblioteca.model.DescriptorEdicion;
 import lombok.*;
@@ -22,7 +23,7 @@ public class EdicionResponse {
     private int edicion;
     private int volumen;
     private int paginas;
-    private String idioma;
+    private Idioma idioma;
     private TipoEdicion tipoEdicion;
     private LocalDate fechaPublicacion;
     private String isbn;

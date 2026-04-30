@@ -18,8 +18,10 @@ public class Autor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = false,length = 255)
     private String nombre;
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private TipoAutor tipoAutor;
     @ManyToMany(mappedBy = "autores")
     private List<Edicion> ediciones = new ArrayList<>();

@@ -3,11 +3,14 @@ package com.bibliotecaunitepc.biblioteca.mapper;
 import com.bibliotecaunitepc.biblioteca.dto.libro.LibroCreateRequest;
 import com.bibliotecaunitepc.biblioteca.dto.libro.LibroResponse;
 import com.bibliotecaunitepc.biblioteca.model.Libro;
+import org.springframework.stereotype.Component;
 
+@Component
 public class LibroMapper {
     public Libro toEntity(LibroCreateRequest dto){
         Libro l = new Libro();
         l.setTituloOriginal(dto.getTituloOriginal());
+        l.setDescripcionGeneral(dto.getDescripcionGeneral());
         l.setTipoLibro(dto.getTipoLibro());
         return l;
     }

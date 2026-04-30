@@ -8,5 +8,6 @@ public class UsuarioMapper {
         Usuario u = new Usuario();
         u.setUsuario(u.getUsuario());
         u.setContrasena(dto.getContrasena());
-    }
+        return u;
+    };
 }

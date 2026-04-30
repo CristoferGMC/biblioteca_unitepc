@@ -8,7 +8,6 @@ import java.util.List;
 public interface LibroService {
     LibroResponse create(LibroCreateRequest request);
     LibroResponse update(Long id);
-    void delete(Long id);
     LibroResponse getById(Long id);
     List<LibroResponse> list();
 }

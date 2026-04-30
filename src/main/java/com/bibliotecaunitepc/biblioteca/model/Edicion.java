@@ -1,5 +1,6 @@
 package com.bibliotecaunitepc.biblioteca.model;
 
+import com.bibliotecaunitepc.biblioteca.enums.Idioma;
 import com.bibliotecaunitepc.biblioteca.enums.TipoEdicion;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -19,17 +20,27 @@ public class Edicion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = false)
     private int edicion;
+    @Column(nullable = false)
     private int volumen;
+    @Column(nullable = false)
     private int paginas;
-    private String idioma;
     @Enumerated(EnumType.STRING)
+    private Idioma idioma;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private TipoEdicion tipoEdicion;
     private LocalDate fechaPublicacion;
+    @Column(nullable = false, length = 20)
     private String isbn;
+    @Column(nullable = false, length = 20)
     private String dewey;
+    @Column(nullable = false, length = 20)
     private String cutter;
+    @Column(length = 255)
     private String imagenUrl;
+    @Column(columnDefinition = "TEXT")
     private String notaEdicion;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "libro_id")

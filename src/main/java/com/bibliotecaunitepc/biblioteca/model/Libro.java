@@ -18,11 +18,13 @@ public class Libro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = false, length = 255)
     private String tituloOriginal;
     @Column(columnDefinition = "TEXT")
     private String descripcionGeneral;
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private TipoLibro tipoLibro;
     @OneToMany(mappedBy = "libro")
-    private List<Edicion> edicion = new ArrayList<>();
+    private List<Edicion> ediciones = new ArrayList<>();
 }
